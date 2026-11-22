@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections — Kanta Gallery &amp; Souvenir Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
+</head>
+<body>
+
+<div class="wrap">
+ <nav>
+      <a href="index.html" class="logo" aria-label="Kanta Gallery and Souvenir Shop, home">
+        <div class="logo-mark"><img src="Photos/kanta.png" alt=""></div>
+      <span class="logo-text">
+        <span class="logo-name">Kanta <span class="logo-accent">Gallery</span></span>
+        <span class="logo-sub">and Souvenir Shop</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="about.html">About</a></li> -->
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
+<hr class="nav-divider">
+
+<!-- COLLECTIONS INTRO -->
+<div class="wrap">
+  <section class="collections-hero reveal">
+    <span class="eyebrow">Full Collection · 2026</span>
+    <h1>Collections</h1>
+    <p class="collections-hero-sub">Addis Ababa, Ethiopia</p>
+    <span class="collections-scroll-hint">Scroll to view</span>
+  </section>
+</div>
+
+<!-- GALLERY — images only, no titles or captions -->
+
+<div class="wrap">
+  <div class="collections-grid layout-a reveal-stagger">
+    <div class="collection-img portrait placeholder stagger-item"><img src="Photos/photo_8_2026-10-20_10-17-18.jpg" alt=""></div>
+    <div class="collection-img landscape placeholder stagger-item"><img src="Photos/photo_2026-10-03_08-23-52.jpg" alt=""></div>
+    <div class="collection-img landscape placeholder stagger-item"><img src="Photos/photo_2026-10-03_08-24-17.jpg" alt=""></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="collections-grid layout-b reveal-stagger">
+    <div class="collection-img wide placeholder stagger-item"><img src="Photos/photo_2026-10-24_09-09-31.jpg" alt=""></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="collections-grid layout-c reveal-stagger">
+    <div class="collection-img square placeholder stagger-item"><img src="Photos/photo_2026-10-03_08-24-11.jpg" alt=""></div>
+    <div class="collection-img square placeholder stagger-item"><img src="Photos/photo_2026-10-03_08-24-08.jpg" alt=""></div>
+    <div class="collection-img square placeholder stagger-item"><img src="Photos/photo_12_2026-10-20_10-17-18.jpg " alt=""></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="collections-grid layout-d reveal-stagger">
+    <div class="collection-img tall placeholder stagger-item"><img src="Photos/photo_2026-10-24_09-58-41.jpg" alt=""></div>
+    <div class="collection-img tall placeholder stagger-item"><img src="Photos/photo_2026-10-24_09-58-42.jpg" alt=""></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="collections-grid layout-e reveal-stagger">
+    <div class="collection-img portrait placeholder stagger-item"><img src="Photos/photo_2026-10-24_09-58-30.jpg" alt=""></div>
+    <div class="collection-img landscape placeholder stagger-item"><img src="Photos/photo_2026-10-24_09-58-46 (2).jpg" alt=""></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-mark footer-logo placeholder"><img src="Photos/kanta.png" alt=""></div>
+        <p>A warm boutique gallery of Ethiopian art, handmade bags, traditional crafts and cultural treasures — connecting heritage with modern creativity since 2012.</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Explore</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="about.html">About</a></li> -->
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Visit Us</span>
+        <p>Airport road<br>Addis Ababa, Ethiopia</p>
+        <span class="footer-label">Open</span>
+       <p> Monday &ndash; Saturday &middot; 9:00 AM &ndash; 9:00 PM <br>Sunday &middot; 2:00 PM &ndash; 9:00 PM</p>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kanta Gallery &amp; Souvenir Shop. Made by hand in Ethiopia.</p>
+      <p class="footer-tagline"> &middot; Handcrafted with Care</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+<script>
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  new Lenis({ autoRaf: true, anchors: true });
+</script>
+</body>
+</html>
